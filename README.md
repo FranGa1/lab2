@@ -29,6 +29,8 @@ Ver la sección [preparar repositorio](https://github.com/I110IS/lab1/blob/maste
 1. [rails console] Crear una nueva víctima y asociarla a un monstruo
 1. [rails console] Obtener todas las víctimas de Nahuelito
 1. [rails console] Obtener todas las víctimas de Nahuelito ordenadas alfabéticamente por su nombre
+ids_v = Attack.where(monster_id:Monster.find_by(name: "Nahuelito").id).ids
+v_ids = Victim.where(id:ids_v).order(:name)
 1. Actualizar los modelos para los monstruos y las víctimas de tal manera que cuando se elimine algún monstruo o víctima, todos sus ataques se eliminen.
 1. Hacer un commit con todos los cambios realizados y pushear el commit al repositorio forkeado.
 

@@ -1,4 +1,4 @@
 class Victim < ApplicationRecord
-    belongs_to :monster
+    has_many :monster, dependent: :destroy, through: :attacks
     validates :name, presence: true
 end
